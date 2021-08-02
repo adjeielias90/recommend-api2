@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "52eb45e7-4267-477a-8f45-a0dad8e8c90b",
+		"name": "Movie Recommendation API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Recomendations(id,title)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"1\", \n  \"title\": \"Star Trek Into Darkness\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/filter/collaborative",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"filter",
+						"collaborative"
+					]
+				},
+				"description": "get recomendation with movie title and userID\nCollaborative filtering"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recomendations(title) Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Star Trek Into Darkness\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/filter/content_based",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"filter",
+						"content_based"
+					]
+				},
+				"description": "get recomendation with movie title and userID\nCollaborative filtering"
+			},
+			"response": []
+		},
+		{
+			"name": "Test API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000/api",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api"
+					]
+				},
+				"description": "Test api index endpoint"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Top Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/top_movies",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"top_movies"
+					]
+				},
+				"description": "GET request that returns the top 10 json list of movies in our dataset."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Top Movies By Genre(Romance example)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/top_movies/romance",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"top_movies",
+						"romance"
+					]
+				},
+				"description": "GET request that returns the top 10 json list of movies in particular genre.\n  If not genre is supplied, it defaults to returning the top 10 movies of our dataset."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

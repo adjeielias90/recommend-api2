@@ -1,0 +1,4 @@
+docker.io/adjeielias90/recommend-api
+
+How to build docker image:
+https://hackernoon.com/flask-api-containerization-using-docker-2er31go
