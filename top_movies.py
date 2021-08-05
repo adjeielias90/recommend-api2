@@ -53,7 +53,7 @@ def build_chart(genre, percentile=0.85):
   C = vote_averages.mean()
   m = vote_counts.quantile(percentile)
   
-  qualified = df[(df['vote_count'] >= m) & (df['vote_count'].notnull()) & (df['vote_average'].notnull())][['title', 'year', 'vote_count', 'vote_average', 'popularity']]
+  qualified = df[(df['vote_count'] >= m) & (df['vote_count'].notnull()) & (df['vote_average'].notnull())][['title', 'year', 'vote_count', 'vote_average', 'popularity', 'overview']]
   qualified['vote_count'] = qualified['vote_count'].astype('int')
   qualified['vote_average'] = qualified['vote_average'].astype('int')
   

@@ -1,0 +1,108 @@
+
+#header {
+    position: fixed;
+    width: 98%;
+    background: black;
+    color: white;
+    overflow: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 100;
+  }
+  .nav{
+    opacity: 0.7;
+  }
+  
+  .active{
+    color:red;
+  }
+  
+  .logo {
+    float: left;
+    display: inline-block;
+    background: red;
+    margin-right: 25px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .left-menu {
+    float: left;
+    display: inline-block;
+  }
+  
+  .left-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .left-menu ul li {
+    display: inline-block;
+    padding: 20px;
+  }
+  
+  .left-menu ul li a {
+    color: white;
+  }
+  
+  .left-menu ul li a:hover, .right-menu ul li a:hover{
+    color: red;
+  }
+  
+  .left-menu ul li a.dropdown {
+    color: red;
+  }
+  
+  .right-menu {
+    float: right;
+    width: 40%;
+    display: inline-block;
+    color: black;
+  }
+  
+  .right-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .right-menu ul li #gsearch {
+    height: 35px;
+    margin:0;
+    width: 300px;
+    border-radius: 5px;
+    padding-left:10px ;
+  }
+  .right-menu ul li #gsearch:focus {
+    outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+  }
+
+ 
+
+
+
+  
+  .right-menu ul li {
+    
+    display: inline-block;
+    padding: 20px;
+  }
+  
+  
+  .right-menu ul li a {
+    color: white;
+  }
+  
+  .right-menu ul li svg {
+    color: white;
+    transform: scale(1.5);
+    margin-right: 10px;
+  }
+  
+  #header a {
+    font-family: helvetica;
+    text-decoration: none;
+  }
+  

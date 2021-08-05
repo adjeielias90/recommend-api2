@@ -8,3 +8,9 @@ scipy
 sklearn
 nltk
 surprise
+#pip3 list --format=freeze > requirements.txt
+
+docker cmds:
+
+sudo docker build -t adjeielias90/recommend-api .
+docker push adjeielias90/recommend-api:latest

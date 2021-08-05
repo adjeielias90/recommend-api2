@@ -69,9 +69,25 @@ def hybrid(userId, title):
   movies = movies.sort_values('est', ascending=False)
   return movies.head(10)
 
+def hybrid2(userId):
+  sim_scores = list(enumerate(cosine_sim[int(userId)]))
+  sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+  sim_scores = sim_scores[1:26]
+  movie_indices = [i[0] for i in sim_scores]
+  
+  movies = smd.iloc[movie_indices][['title', 'vote_count', 'vote_average', 'year', 'id']]
+  movies['est'] = movies['id'].apply(lambda x: svd.predict(userId, indices_map.loc[x]['movieId']).est)
+  movies = movies.sort_values('est', ascending=False)
+  return movies.head(10)
+
 
 # print(hybrid(500, 'Avatar'))
 
 def collaborative_filtering(id, movie):
   prediction = hybrid(id, movie)
+  return prediction.to_json(orient='records')
+
+
+def collaborative_filtering2(id):
+  prediction = hybrid2(id)
   return prediction.to_json(orient='records')

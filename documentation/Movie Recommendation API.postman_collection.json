@@ -144,7 +144,39 @@
 				"description": "GET request that returns the top 10 json list of movies in particular genre.\n  If not genre is supplied, it defaults to returning the top 10 movies of our dataset."
 			},
 			"response": []
+		},
+		{
+			"name": "Get Movie Poster URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Star Trek Into Darkness\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/poster",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"poster"
+					]
+				},
+				"description": "Takes a movie titlle and returns a url to an image."
+			},
+			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }

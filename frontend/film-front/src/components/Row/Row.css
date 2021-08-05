@@ -1,0 +1,82 @@
+
+.row {
+  margin-left: 20px;
+  color: white;
+}
+
+.stop {
+  background-color: #FF473F;
+  color: black;
+}
+
+
+
+.scrollContainer {
+  width: 50%;
+}
+.row__posters {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px 0 20px 0;
+}
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+.row__poster {
+  border-radius: 5px;
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  transition: transform 450ms;
+  margin-right: 10px;
+}
+#b {
+  display: none;
+}
+
+
+.row__poster:hover {
+  transform: scale(1.08);
+  
+}
+.row__posterLarge {
+  max-height: 250px;
+}
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
+
+
+.button__info {
+  position: absolute;
+  top:50%;
+  left: 55px;
+  text-align: start;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-right: 1rem;
+  background-color: rgba(51,51,51,.5);
+  padding: .4rem 1rem;
+  z-index: 99;
+}
+
+
+.button__info:hover{
+  color: #000;
+  background-color: #e6e6e6;
+  /* transition: all .2s; */
+}
+
+.banner__buttons{
+  position: relative;
+  width: 100%;
+}
+
+
+
+
